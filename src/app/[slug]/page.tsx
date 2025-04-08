@@ -6,6 +6,15 @@ import { getPost } from '../../lib/ghost'
 import { formatDate } from '../../lib/utils' // Assuming you have a formatDate function
 import { CalendarDaysIcon, UserCircleIcon, ClockIcon } from '@heroicons/react/24/outline'
 
+// Define Tag interface from Ghost CMS
+interface Tag {
+  id: string
+  name: string
+  slug: string
+  description?: string
+  feature_image?: string
+}
+
 // Function to check if the image should be unoptimized
 const shouldUnoptimize = (url: string) => {
   return url?.includes('89.111.169.80') || url?.includes('static.ghost.org')
@@ -66,7 +75,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
           <div className="max-w-4xl mx-auto text-center">
             {post.tags && post.tags.length > 0 && (
               <div className="flex flex-wrap justify-center gap-2 mb-5">
-                {post.tags.map((tag) => (
+                {post.tags.map((tag: Tag) => (
                   <Link
                     key={tag.slug}
                     href={`/tag/${tag.slug}`}
