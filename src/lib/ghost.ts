@@ -10,6 +10,7 @@ export interface Post {
   updated_at: string
   tags: Tag[]
   primary_author: Author
+  primary_tag?: Tag
   reading_time: number
 }
 
