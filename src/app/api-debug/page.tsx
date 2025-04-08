@@ -1,4 +1,5 @@
 import { getPosts, getTags, getAuthors } from '../../lib/ghost'
+import { Post, Tag, Author } from '../../lib/ghost'
 
 export default async function ApiDebugPage() {
   // Fetch data from API
@@ -27,11 +28,11 @@ export default async function ApiDebugPage() {
           <h2 className="text-xl font-bold mb-4">Posts ({posts.length})</h2>
           {posts.length > 0 ? (
             <ul className="list-disc pl-5 space-y-2">
-              {posts.map(post => (
+              {posts.map((post: Post) => (
                 <li key={post.id}>
                   <strong>{post.title}</strong>
                   <span className="text-sm text-gray-500 ml-2">
-                    [{post.tags.map(t => t.name).join(', ')}]
+                    [{post.tags.map((t: Tag) => t.name).join(', ')}]
                   </span>
                 </li>
               ))}
@@ -45,7 +46,7 @@ export default async function ApiDebugPage() {
           <h2 className="text-xl font-bold mb-4">Tags ({tags.length})</h2>
           {tags.length > 0 ? (
             <ul className="list-disc pl-5 space-y-2">
-              {tags.map(tag => (
+              {tags.map((tag: Tag) => (
                 <li key={tag.id}>
                   <strong>{tag.name}</strong> 
                   <code className="ml-2 text-sm bg-gray-100 px-1">({tag.slug})</code>
@@ -64,7 +65,7 @@ export default async function ApiDebugPage() {
           <h2 className="text-xl font-bold mb-4">Authors ({authors.length})</h2>
           {authors.length > 0 ? (
             <ul className="list-disc pl-5 space-y-2">
-              {authors.map(author => (
+              {authors.map((author: Author) => (
                 <li key={author.id}>
                   <strong>{author.name}</strong>
                   <code className="ml-2 text-sm bg-gray-100 px-1">({author.slug})</code>
