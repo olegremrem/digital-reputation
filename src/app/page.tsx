@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Metadata } from 'next'
 import { getPosts, getPostsByTag, getTags } from '../lib/ghost'
+import { Post, Tag } from '../lib/ghost'
 import { formatDate } from '../lib/utils'
 import { MagnifyingGlassIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 
@@ -92,7 +93,7 @@ export default async function HomePage() {
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Hero Left - Small News Items */}
             <div className="lg:w-1/4 space-y-6">
-              {featuredPosts.slice(1, 5).map((post) => (
+              {featuredPosts.slice(1, 5).map((post: Post) => (
                 <Link key={post.id} href={`/${post.slug}`} className="group flex items-start space-x-3 p-3 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300">
                   {post.feature_image && (
                     <div className="relative w-20 h-20 flex-shrink-0 overflow-hidden rounded-lg">
@@ -204,7 +205,7 @@ export default async function HomePage() {
             </div>
             
             <div className="space-y-6">
-              {newsPosts.slice(1, 3).map((post) => (
+              {newsPosts.slice(1, 3).map((post: Post) => (
                 <Link key={post.id} href={`/${post.slug}`} className="group block bg-white p-3 rounded-xl hover:shadow-md transition-all duration-300">
                   <div className="relative aspect-[16/9] overflow-hidden rounded-lg mb-3">
                     {post.feature_image && (
@@ -251,7 +252,7 @@ export default async function HomePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {newsPosts.slice(0, 4).map((post) => (
+            {newsPosts.slice(0, 4).map((post: Post) => (
               <Link key={post.id} href={`/${post.slug}`} className="group block bg-gradient-to-br from-white to-indigo-50 rounded-xl hover:shadow-lg transition-all duration-300 overflow-hidden">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   {post.feature_image && (
@@ -367,7 +368,7 @@ export default async function HomePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {techPosts.map((post) => (
+            {techPosts.map((post: Post) => (
               <Link key={post.id} href={`/${post.slug}`} className="group block bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1">
                 <div className="relative aspect-video overflow-hidden">
                   {post.feature_image && (
