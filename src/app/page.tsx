@@ -12,8 +12,8 @@ const shouldUnoptimize = (url: string) => {
 }
 
 export const metadata: Metadata = {
-  title: 'Digital Reputation - News & Insights',
-  description: 'Expert coverage and insights on digital reputation management, online privacy, and brand protection',
+  title: 'AFF4 Insights - Home',
+  description: 'AFF4 Insights: Your source for insightful news, technology analysis, and current events.',
 }
 
 export default async function HomePage() {
@@ -41,52 +41,6 @@ export default async function HomePage() {
   
   return (
     <main className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-gray-100">
-      {/* Header */}
-      <header className="bg-gradient-to-r from-indigo-600 to-purple-600 shadow-lg">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-bold text-white">
-              Digital Reputation
-            </Link>
-            
-            <nav className="hidden md:flex space-x-6">
-              <Link href="/" className="text-white hover:text-indigo-100 transition-colors">
-                Home
-              </Link>
-              <Link href="/tag/news" className="text-white hover:text-indigo-100 transition-colors">
-                News
-              </Link>
-              <Link href="/tag/technology" className="text-white hover:text-indigo-100 transition-colors">
-                Technology
-              </Link>
-              <Link href="/about" className="text-white hover:text-indigo-100 transition-colors">
-                About
-              </Link>
-              <Link href="/contact" className="text-white hover:text-indigo-100 transition-colors">
-                Contact
-              </Link>
-            </nav>
-            
-            <div className="flex items-center space-x-4">
-              <button className="text-white hover:text-indigo-100">
-                <MagnifyingGlassIcon className="h-5 w-5" />
-              </button>
-              <Link 
-                href="/contact" 
-                className="hidden md:inline-block px-4 py-2 bg-white text-indigo-600 text-sm font-medium rounded-full hover:bg-indigo-100 transition-colors"
-              >
-                Subscribe
-              </Link>
-              <button className="md:hidden text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
-      
       {/* Hero Section */}
       <section className="hero py-16 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
         <div className="container mx-auto px-4">
@@ -417,13 +371,13 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">
-                Protect Your Digital Reputation
+                Stay Ahead with AFF4 Insights
               </h2>
               <p className="text-indigo-100 mb-2">
-                Get exclusive insights on protecting your brand online, latest privacy trends, and reputation management strategies.
+                Get the latest news, tech analysis, and event coverage delivered to your inbox.
               </p>
               <p className="text-xl italic text-indigo-200 mb-6">
-                "Your online reputation is your most valuable digital asset."
+                "Informed decisions start with insight."
               </p>
               <form className="flex flex-col sm:flex-row gap-3">
                 <input
@@ -446,10 +400,10 @@ export default async function HomePage() {
                 <div className="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-3xl -rotate-3"></div>
                 <div className="relative bg-white/20 backdrop-blur-sm rounded-3xl p-8 text-center">
                   <div className="bg-indigo-500/30 backdrop-blur-sm inline-flex items-center justify-center w-20 h-20 rounded-full mb-6">
-                    <span className="text-5xl">🛡️</span>
+                    <span className="text-5xl">💡</span>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4">Stay Protected</h3>
-                  <p className="text-indigo-100 mb-6">Join our community of digital reputation experts and get the latest insights.</p>
+                  <h3 className="text-2xl font-bold mb-4">Get Insightful News</h3>
+                  <p className="text-indigo-100 mb-6">Join our community and stay informed with AFF4 Insights.</p>
                   <div className="inline-flex space-x-2">
                     <span className="w-3 h-3 bg-purple-400 rounded-full"></span>
                     <span className="w-3 h-3 bg-indigo-400 rounded-full"></span>
