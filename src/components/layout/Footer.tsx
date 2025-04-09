@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">About</h3>
             <p className="text-gray-300">
-              A modern blog built with Next.js and powered by Ghost CMS. Featuring the latest news, technology updates, and more.
+              AFF4 Insights cuts through the noise to deliver clear, concise, and insightful analysis of news, technology, and current events. Our mission is to foster understanding and inform decisions.
             </p>
           </div>
 
