@@ -1,0 +1,16 @@
+    {
+      "rewrites": [
+        {
+          "source": "/robots.txt",
+          "destination": "https://cms.aff4.org/robots.txt"
+        },
+        {
+          "source": "/sitemap.xml",
+          "destination": "https://cms.aff4.org/sitemap.xml"
+        },
+        {
+          "source": "/sitemap-:match*.xml",
+          "destination": "https://cms.aff4.org/sitemap-:match*.xml"
+        }
+      ]
+    }
