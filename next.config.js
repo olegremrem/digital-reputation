@@ -6,6 +6,7 @@ const nextConfig = {
       'cms.aff4.org', // Новый домен Ghost CMS
       'localhost',      // Для локальной разработки
       'static.ghost.org',
+      'images.unsplash.com',
       // '89.111.169.80', // Удален старый IP, если не нужен
     ],
     // Оставляем unoptimized: false для продакшена, чтобы Vercel оптимизировал изображения
